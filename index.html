@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Whimper Podcast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+<body onload='loadingAnimation();'>
+    <div class="cursor"></div>
+    <div class="play"><img src="play.svg" alt=""></div>
+    <div class="videos-popup" id="video-popup">
+        <h1>Through videos</h1>
+        <a onclick="document.getElementById('video-popup-button').classList.toggle('expanded'); toggleText('video-popup');"><img src="cross.svg" alt=""></a>
+        <div class="popup-grid">
+            <div class="cell">
+                <img src="milkyway.jpg" alt="">
+                <p>In this episode, Mihir Athale discusses the importance of STEM education and how it can help students develop the skills they need to succeed in today's world.</p>
+                <a href="https://www.youtube.com/watch?v=7DcQcCQvqqs">Watch Now</a>
+            </div>
+            <div class="cell">
+                <img src="milkyway.jpg" alt="">
+                <p>An explainer video from a 17-year-old space-tech podcaster on the history of the space race and how it all started due to the cold war.</p>
+                <a href="https://www.youtube.com/watch?v=z-riE4LR1Ts">Watch Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-popup" id="audio-popup">
+        <h1>Through audio</h1>
+        <a onclick="document.getElementById('audio-popup-button').classList.toggle('expanded'); toggleText('audio-popup');"><img src="cross.svg" alt=""></a>
+        <div class="popup-grid">
+            <div class="cell">
+                <img src="number-3.jpg" alt="">
+                <p>Einstein's Field Equations consist the ability to solve the biggest mysteries and understandings of our universe.</p>
+                <a href="https://open.spotify.com/episode/6Cyulr6f19qhkdcv6cRu9c?si=03db09bf0dff44e3">Watch Now</a>
+            </div>
+            <div class="cell">
+                <img src="number-1.jpg" alt="">
+                <p>What does it take to build a rocket? This and many more as we delve into what it takes to get something into space.</p>
+                <a href="https://open.spotify.com/episode/1QNZozhReNwgHk3mQ5qsRy?si=722076b73f95442c">Watch Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <img src="logo.png" alt="">
+        <a onclick="navbarOpen();">
+            <div>
+                <div></div>
+            </div>
+        </a>
+        <div class="menu">
+            <div class="shapes-animation">
+                <div class="block" style="background: #A325E8; --animation-order: 1;"></div>
+                <div class="block" style="background: #FF6654; --animation-order: 2;"></div>
+                <div class="block" style="background: #111; --animation-order: 3;"></div>
+                <div class="block" style="background: #ddd; --animation-order: 4;"></div>
+                <div class="block" style="background: #71FF60; --animation-order: 5;"></div>
+                <div class="block" style="background: #DB4230; --animation-order: 6;"></div>
+                <div class="block" style="background: #CC6EFF; --animation-order: 7;"></div>
+            </div>
+            <div class="links">
+                <a onclick="goToSection('section-1');" style="--animation-order:1;">Home</a>
+                <a onclick="goToSection('section-2');" style="--animation-order:2;">About</a>
+                <a onclick="goToSection('section-3');" style="--animation-order:3;">Episodes</a>
+                <a onclick="goToSection('section-4');" style="--animation-order:4;">Reviews</a>
+                <a href="https://www.linkedin.com/company/thewhimperpodcast/people/" style="--animation-order:5;">Team</a>
+                <a onclick="goToSection('section-5');" style="--animation-order:6;">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="loading-screen">
+        <div id="wrapper" data-configuration="1" data-roundness="1">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+          </div>
+        <p>Loading</p>
+    </div>
+    <div class="hero" id="section-1">
+        <div id="left-side" class="side">
+            <h2 class="title">
+              Science outreach platforms need to be more 
+              <span class="fancy">GOOFY</span>
+              <a onclick="document.getElementById('section-2').scrollIntoView(true);">Who are we?</a>      
+            </h2>
+          </div>
+          <div id="right-side" class="side">
+            <h2 class="title">
+              Science outreach platforms need to be more 
+              <span class="fancy">COOL</span>
+              <a onclick="document.getElementById('section-2').scrollIntoView(true);">Who are we?</a>      
+            </h2>
+          </div>
+    </div>
+    <div class="about" id="section-2">
+        <p>We are the Whimper Podcast, and we believe that unique <mark>storytelling</mark> of science creates <mark>curiosity!</mark></p>
+        <div class="overlays">
+            <div class="overlay" data-value="1" id="first">
+                <p>"I have no special talents. I am only passionately curious" <br><b>ALBERT EINSTEIN</b></p>
+            </div>
+            <div class="overlay" data-value="2" id="second">
+                <p><b>WE STAND FOR:</b><br> Curiosity is the ultimate driver of humanity.</p>
+            </div>
+            <div class="overlay" data-value="3" id="third">
+                <p>'Whimper' comes from the idea that the universe will not end in a bang but a 'whimper'.</p>
+            </div>
+        </div>
+    </div>
+    <div class="topics">
+        <h1 id="line-one">ASTRONOMY. SPACE TECHNOLOGY.</h1>
+        <h1 id="line-two">ARTIFICIAL INTELLIGENCE. DEEP LEARNING.</h1>
+        <h1 id="line-three">FUTURE TECHNOLOGY. DATA ANALYTICS</h1>
+    </div>
+    <div class="how">
+        <div class="how-grid">
+            <div class="cell">
+                <h1>How?</h1>
+                <p>Our core motive with The Whimper Podcast is to communicate the latest developments and research in these fields by talking directly with the experts and compiling fun, engaging and goofy content. To learn about what kind of outreach we do, click on one of the red boxes to the right!</p>
+                <a onclick="document.getElementById('section-3').scrollIntoView(true);">See Featured Work</a>
+            </div>
+            <div class="cell">
+                <div class="art-wrapper">
+                    <div class="curved-box"></div>
+                    <div class="curved-box"></div>
+                    <div class="curved-box"></div>
+                    <div class="curved-box"></div>
+                    <div id="video-popup-button" class="curved-box" onclick="document.getElementById('video-popup-button').classList.toggle('expanded'); toggleText('video-popup');"></div>
+                    <div id="audio-popup-button" class="curved-box" onclick="document.getElementById('audio-popup-button').classList.toggle('expanded'); toggleText('audio-popup');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="featured" id="section-3">
+        <h1>Featured Episodes</h1>
+        <div class="featured-grid">
+            <div class="cell right">
+                <h1>Student led Rockets</h1>
+                <p>What does it take to build a rocket? How is this rocket being built by students? This and many more as we delve into what it takes to get something into space.</p>
+                <p><b>with VSLV VSSUT team</b></p>
+            </div>
+            <div class="cell">
+                <a href="https://open.spotify.com/episode/1QNZozhReNwgHk3mQ5qsRy?si=722076b73f95442c"><img src="number-1.jpg" alt=""></a>
+            </div>
+            <div class="cell right">
+                <a href="https://open.spotify.com/episode/6Cyulr6f19qhkdcv6cRu9c?si=03db09bf0dff44e3"><img src="number-3.jpg" alt=""></a>
+            </div>
+            <div class="cell">
+                <h1>The Field Equations</h1>
+                <p>Einstein's Field Equations consist the ability to solve the biggest mysteries and understandings of our universe and hence we dive deep into understanding them.</p>
+                <p><b>with Shounak Bhattacharya</b></p>
+            </div>
+            <div class="cell right">
+                <h1>Cosmic Crafting</h1>
+                <p>How are stars and star clusters formed and what was the beginning of the universe like? How do we understand astrophysics and what does the future of India in the field look like?</p>
+                <p><b>with Mihir Tripathi</b></p>
+            </div>
+            <div class="cell">
+                <a href="https://open.spotify.com/episode/0kMkpazvnnqa0C9ifk2Ez1?si=bcf97cc2bbe94f48"><img src="number-2.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="downloads">
+        <img src="downloads.svg" alt="">
+        <a onclick="document.getElementById('section-4').scrollIntoView(true);">What do people think?</a>
+    </div>
+    <div class="reviews" id="section-4">
+        <h1>What do people <mark>think?</mark></h1>
+        <div class="review">
+            <img src="review-1.svg" alt="">
+            <p>The Whimper Podcast is extremely insightful, covering such amazing topic that I always get engrossed into. The open interaction between the Divyansh (host) and the numerous guests always give me as a viewer new and new perspectives every time! From the first episode I listened to, it earned my five. Kudos to The Whimper Podcast!"</p>
+            <p><b>Shreyansh Sharma</b></p>
+        </div>
+        <div class="review">
+            <img src="review-1.svg" alt="">
+            <p>As I am interested in Space and Astrophysics, I find your podcast very useful. You always touch upon the right and very interesting topics. I really enjoy your podcast and LinkedIn Newsletter. You invite very knowledgeable people for podcast conversation. I really appreciate your consistency and your helping nature. I can rate your podcast 5/5 bcz it is very useful for all the age groups.</p>
+            <p><b>Manish Soni</b></p>
+        </div>
+        <a href="">Read More</a>
+    </div>
+    <div class="contact">
+        <p style="margin-left:10%">LET'S</p>
+        <p style="margin-left:50%;">GET</p>
+        <p style="margin-left:30%;">IN</p>
+        <p style="margin-left:50%; color:#A325E8;">TOUCH</p>
+        <div class="overlay" data-value="1" id="first-contact">
+        </div>
+        <div class="overlay" data-value="2" id="second-contact">
+        </div>
+        <div class="overlay" data-value="3" id="third-contact">
+        </div>
+    </div>
+    <div class="form">
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2F9jukzj0o6ta.typeform.com%2Fto%2FgzkiZiol%3Ftypeform-cache%3D0%26disable-auto-focus%3Dtrue&amp;key=462812a26b593f2dbfbfcbb14f6d699a" style="top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen="" allow="encrypted-media *;"></iframe>
+    </div>
+    <div class="footer" id="section-5">
+        <a href="mailto:thewhimperpodcast@gmail.com">
+            <h1>thewhimperpodcast@gmail.com</h1>
+        </a>
+        <div class="footer-grid">
+            <div class="cell">
+                <h1>Links</h1>
+            </div>
+            <div class="cell">
+                <a onclick="goToSection('section-1');">Home</a>
+                <a onclick="goToSection('section-2');">About</a>
+                <a onclick="goToSection('section-3');">Episodes</a>
+                <a onclick="goToSection('section-4');">Reviews</a>
+                <a href="https://www.linkedin.com/company/thewhimperpodcast/people/">Team</a>
+                <a onclick="goToSection('section-5');">Contact</a>
+            </div>
+            <div class="cell">
+                <h1>Socials</h1>
+            </div>
+            <div class="cell">
+                <a href="https://open.spotify.com/show/7xB04oc0PX9A485OUX7sUC?si=bffe23424f5f4544">Spotify</a>
+                <a href="https://www.youtube.com/@thewhimperpod/">YouTube</a>
+                <a href="https://www.linkedin.com/company/thewhimperpodcast/">LinkedIn</a>
+                <a href="https://podcasts.apple.com/us/podcast/the-whimper-podcast/id1681454507">iTunes</a>
+                <a href="https://music.amazon.in/podcasts/2771e78f-2d99-402d-be30-7b93dde22405/the-whimper-podcast">Amazon</a>
+            </div>
+            <div class="cell">
+                <a href="https://redcircle.com/shows/the-whimper-podcast">Red Circle</a>
+                <a href="https://www.stitcher.com/show/the-whimper-podcast">Stitcher</a>
+                <a href="https://www.instagram.com/thewhimperpod/">Instagram</a>
+            </div>
+        </div>
+        <p style="margin-top:8vh;">Copyright &copy; 2023. All Rights Reserved. The Whimper Podcast.</p>
+        <p>Designed and developed by Rudra Sekhri</p>
+    </div>
+    <script src="cursor.js"></script>
+    <script src="app.js"></script>
+    <script src="transitions.js"></script>
+</body>
+</html>
