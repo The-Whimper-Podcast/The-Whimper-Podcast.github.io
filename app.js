@@ -11,6 +11,8 @@ let contact_img1 = document.getElementById('first-contact');
 let contact_img2 = document.getElementById('second-contact');
 let contact_img3 = document.getElementById('third-contact');
 let downloads_img = document.querySelector('.downloads img');
+let review_1 = document.getElementById('review-1');
+let review_2 = document.getElementById('review-2');
 
 const left = document.getElementById("left-side");
 
@@ -95,7 +97,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  let scale_img = 1 - ((window.scrollY-4300)/600);
+  let scale_img = 1 - ((window.scrollY-4100)/2000);
   if (scale_img < 1) {
     scale_img = 1;
   }
@@ -104,13 +106,34 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  let parallax1_contacts = 5+((this.window.scrollY-5000)/100);
-  let parallax2_contacts = 30+((this.window.scrollY-5000)/60);
-  let parallax3_contacts = 50+((this.window.scrollY-5000)/80);
+  let parallax1_contacts = 5+((this.window.scrollY-6000)/100);
+  let parallax2_contacts = 30+((this.window.scrollY-6000)/60);
+  let parallax3_contacts = 50+((this.window.scrollY-6000)/80);
 
   contact_img1.style.top = parallax1_contacts + '%';
   contact_img2.style.top = parallax2_contacts + '%';
   contact_img3.style.top = parallax3_contacts + '%';
+});
+
+window.addEventListener('scroll', function() {
+  console.log('changing');
+  let transform_1 = 5-((this.window.scrollY-5200)/100);
+  opacity = ((this.window.scrollY-4900)/500);
+  if (transform_1 < 0) {
+    transform_1 = 0;
+  }
+  let transform_2 = -5+((this.window.scrollY-5300)/150);
+  if (transform_2 > 0) {
+    transform_2 = 0;
+  }
+  if (opacity > 1) {
+    opacity = 1;
+  }
+  review_1.style.transform = 'translateX(' + transform_1 + '%)';
+  review_2.style.transform = 'translateX(' + transform_2 + '%)';
+  review_1.style.opacity = opacity;
+  review_2.style.opacity = opacity;
+  console.log('changed');
 });
 
 function toggleText(id_of_popup) {

@@ -582,7 +582,7 @@ body {
 
 .reviews {
   width:80%;
-  height:140vh;
+  height:190vh;
   padding:5vh 10%;
   display:flex;
   flex-direction: column;
@@ -594,6 +594,12 @@ body {
   display:flex;
   flex-direction: column;
   gap:3vh;
+  width:50%;
+}
+
+.reviews .right {
+  float:right;
+  margin-left:50%;
 }
 
 .review img {
@@ -835,6 +841,22 @@ body {
   color:#A325E8;
 }
 
-.reviews a {
-  margin-top:0;
+.reviews .average h1 {
+  font-size:3vw;
+}
+
+.reviews .average img {
+  width:20vw;
+  margin-top:3vh;
+}
+
+.reviews .average {
+  display:flex;
+  flex-direction:column;
+  gap:1vh;
+  align-items: center;
+}
+
+.reviews .right img {
+  float:right;
 }
