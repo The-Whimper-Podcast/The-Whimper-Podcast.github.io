@@ -118,7 +118,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
   console.log('changing');
   let transform_1 = 5-((this.window.scrollY-5200)/100);
-  opacity = ((this.window.scrollY-4900)/300);
+  opacity = ((this.window.scrollY-4800)/300);
   if (transform_1 < 0) {
     transform_1 = 0;
   }
